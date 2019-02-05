@@ -1,3 +1,16 @@
+-MAP
+.. -NEXT_SCENE
+.. -OPENING_SCENE
+-ENGINE
+.. -PLAY
+-SCENE
+.. -ENTER
+.. -DIE
+.. -Basement
+.. -StaircasetoKitchen
+.. -LivingRoom
+.. -OctopusRoom
+
 No Escape:
 
 global robber_alive = true
