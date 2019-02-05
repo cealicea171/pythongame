@@ -5,7 +5,7 @@ global robber_alive = true
 PLACE  -1- Basement:
     - The crazy neighborhood robbers are in your home and killed everyone in your house. You are the only one in the house to survive, the only way out is by
 defeating the robber, to get to the robber you have to get to the attic to get the only gun in the house and shoot him. You're in the basement good luck.
-    - You notice a staircase to your right and a door to your left.
+   - You notice a staircase to your right and a door to your left.
     - Which way will you go?
       - User input > " "
     CHOICE  - if they go left:
@@ -43,10 +43,10 @@ RESULT            - You get the gun to kill the robber. You go up a rope and get
 
 PLACE  - OctopusRoom:
         - Now you are at the attic, you see the robber. He is coming right at you? You have the gun and shoot him. You miss, that was your last bullet. What do you do now? You can PUNCH, RETREAT, TACKLE.
-          if TACKLE:
+CHOICE          if TACKLE:
             - You tackle the robber!!! Now he loses the gun. You, grab his gun and shoot. HEAD SHOT!!! You beat the robber. You are victorious!!!
-                  - robber_alive = false
+  RESULT                - robber_alive = false
 - end game
-                - else any other action:
-                  - He shoots you before you even make a move.  You died.
+  CHOICE              - else any other action:
+  RESULT              - He shoots you before you even make a move.  You died.
                   - end game
