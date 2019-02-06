@@ -13,7 +13,6 @@
 
 No Escape:
 
-global robber_alive = true
 
 PLACE  -1- Basement:
     - The crazy neighborhood robbers are in your home and killed everyone in your house. You are the only one in the house to survive, the only way out is by
@@ -29,36 +28,33 @@ PLACE  - StaircasetoKitchen:
       CHOICE   - if they go right: if robber_alive:
           - global robber_alive
           - As you go up the stairs you find a door, that leads you to a kitchen. There you see through the hole, nobody is there. You open the door.
-          - Once you get in the kitchen, there is a door in front of you going straight outside, there is a hallway to the left to continue into the
+          - Once you get in the kitchen, there is a door on the left of you going straight outside, there is a hallway to the right to continue into the
 RESULT  - living room.
           - What will you do?
             - User input > " "
-CHOICE                - if you try to go out through the door leading outside:
+CHOICE                - if left:
 RESULT                - A robber is there waiting and the lookout starts alerting the other robbers and they kill you. You died.
                 - End game.
-CHOICE              - if you go left to the hallway:
+CHOICE              - if you right to the hallway:
                 - The robber hears you are coming so it starts preparing for a break, but you get quiet instantly making him think it is the floor sounding.
 RESULT
-                - enter passage way to room 3
+
 
 PLACE  - LivingRoom:
-        -  As you move around the living room. you discover that it leads to a ladder.  The ladder is somewhat unstable though it seemingly goes to another room. You do see boots, a safe, and a box. You can CLIMB on the ladder, GRAB the box, or BREAK into the safe.
+        -  As you move around the living room. you discover that it leads to a ladder.  The ladder is somewhat unstable though it seemingly goes to another room. You do see boots, a safe, and a box. You can CLIMB on the ladder or BREAK into the safe.
         - What will you do?  input> " "
 CHOICE          - if CLIMB:
 RESULT            - the ladder falls and you hit yourself on the head causing you to die from impact on the head.  You died.
-            - end game
-CHOICE        - if GRAB:
-RESULT          - The box has a bomb inside it explodes whenever someone picks it up.  You died.
             - end game
 CHOICE          - if BREAK:
 RESULT            - You get the gun to kill the robber. You go up a rope and get to the attic  Phew.
         - enter room 4.
 
-PLACE  - OctopusRoom:
+PLACE  - AtticRoom:
         - Now you are at the attic, you see the robber. He is coming right at you? You have the gun and shoot him. You miss, that was your last bullet. What do you do now? You can PUNCH, RETREAT, TACKLE.
 CHOICE          if TACKLE:
             - You tackle the robber!!! Now he loses the gun. You, grab his gun and shoot. HEAD SHOT!!! You beat the robber. You are victorious!!!
-  RESULT                - robber_alive = false
+  RESULT
 - end game
   CHOICE              - else any other action:
   RESULT              - He shoots you before you even make a move.  You died.
